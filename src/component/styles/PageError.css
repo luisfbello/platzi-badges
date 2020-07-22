@@ -1,0 +1,30 @@
+.error{
+    align-items: center;
+    /* margin: 200px; */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    min-height: 100vh;
+    width: 100%;
+    background: url('../../images/robot.png') ;
+    opacity: 0.6
+    
+}
+
+.error-container{
+    width: 400px;
+    padding: 50px;
+    align-items: center;
+    border: 1px solid black ;
+    padding: 10px;
+    box-shadow: 8px 4px 5px #b3b3b3;
+    border-radius: 10px;
+    background-color: white;
+    
+}
+
+.imgError{
+
+    width: 100px;
+    
+}

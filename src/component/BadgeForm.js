@@ -4,27 +4,33 @@ import React from 'react'
 class BadgeForm extends React.Component{
     state={
     }
-
     
-    handleClick =(e)=>{
+    // handleClick =(e)=>{
         
-        console.log('Button Has Click')
-    }
-    handleSubmit =(e)=>{
+    //     console.log('Button Has Click')
+    // }
+    // handleSubmit =(e)=>{
         
-        e.preventDefault()
-        console.log(this.state)
-    }
+    //     e.preventDefault()
+    //     console.log(this.state)
+    // }
 
     render(){
+        
         return(
             <React.Fragment>
                 <div className="card">
                     <div className="card-header">
-                        <center><h1>New Attendant</h1></center>
+                        {
+                            this.props.isEdit &&  <center><h1>Edit Attendant</h1></center>
+                        }
+                        {
+                            !this.props.isEdit &&  <center><h1>New Attendant</h1></center>
+                        }
+                        
                     </div>
                     <div className="card-body">
-                        <form onSubmit={this.handleSubmit}>
+                        <form onSubmit={this.props.onSubmit}>
                             <div className="form-group">
                                 <label>First Name</label>
                                 <input onChange={this.props.onChange} value={this.props.formValues.firstName} className='form-control' type="text" name='firstName'/>
